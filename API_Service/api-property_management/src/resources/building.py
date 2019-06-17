@@ -15,17 +15,17 @@ class Building(Resource):
         self.service = PropertyService()
 
     def get(self, building_id):
-        """ Get Data Transporter """
+        """ Get  """
         response = self.service.get_building(building_id)
         return response
 
     def delete(self, building_id):
-        """ Delete Data Transporter List """
+        """ Delete """
         response = self.service.delete_building(building_id)
         return response
 
     def put(self, building_id):
-        """ Update Data Transporter List """
+        """ Update """
         data = json.loads(request.data.decode('utf-8'))
         # data['updated_at'] = str(datetime.datetime.utcnow())
         update_response = self.service.update_building(data, building_id)

@@ -15,8 +15,7 @@ from pymongo.errors import PyMongoError
 
 from commons.json_utils import to_json, to_list_json
 from commons.mongo_services import MongoClients, DB_NAME
-from constants.custom_field_error import HTTP_500_INTERNAL_SERVER_ERROR, HTTP_201_CREATED, \
-    HTTP_203_NON_AUTHORITATIVE_INFORMATION
+from constants.custom_field_error import HTTP_500_INTERNAL_SERVER_ERROR, HTTP_201_CREATED
 
 
 class PropertyService:
@@ -135,10 +134,9 @@ class PropertyService:
         results = []
         try:
             for id in ids:
-                result = s.find_one_and_delete(self.db_name, self.collection_name,
-                                               {'transporter_id': id})
+                result = self.connection.find_one_and_delete(DB_NAME, 'buildings',
+                                                             {'building_id': id})
                 results.append(id)
         except PyMongoError as err:
-            logger.error(err)
             return to_json({"message": err.args[0]}, is_error=True), HTTP_500_INTERNAL_SERVER_ERROR
         return to_json(results)

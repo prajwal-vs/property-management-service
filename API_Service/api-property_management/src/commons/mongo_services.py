@@ -18,9 +18,9 @@ class MongoClients:
         The method is useful to do any initialization you want to do
         with your object
         """
-        self.client = MongoClient(MONGO_URL,  ssl_cert_reqs=ssl.CERT_NONE)
+        self.client = MongoClient(MONGO_URL, ssl_cert_reqs=ssl.CERT_NONE)
         self.database = self.client[DB_NAME]
-        self.error=None
+        self.error = None
 
     def find_one(self, collectionname, data):
         """Find One."""
