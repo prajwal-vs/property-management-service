@@ -21,7 +21,7 @@
 3. Activate Virtual Env.
 
 4. In Terminal
-   cmd:'npm install'
+   cmd: `npm install`
 
 5. In Terminal
-   cmd:'npm App.js'
+   cmd: `npm App.js`
