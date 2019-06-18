@@ -25,6 +25,3 @@
 
 5. In Terminal
    cmd:'npm App.js'
-
- 6. It will Run in Browser
- 	http://localhost:3000/
