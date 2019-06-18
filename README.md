@@ -13,7 +13,7 @@
     
 5. Run `apps.py` file.
 
-#UI
+# UI
 1. Clone the repository from Bit Bucket.
 
 2. Create Virtual Env.
