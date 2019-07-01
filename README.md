@@ -22,6 +22,6 @@
 
 4. In Terminal
    cmd: `npm install`
-
+   cmd: `start`
 5. In Terminal
    cmd: `npm App.js`
